@@ -1,0 +1,44 @@
+import { useState, useEffect } from "react";
+import { wowapi } from "../wowapi";
+import axios from "axios";
+
+export function MythicPlusRank() {
+  const [roster, setRoster] = useState([]);
+  useEffect(() => {
+    wowapi
+      .get(
+        "guild/azralon/so-no-job/roster?namespace=profile-us&locale=en_US&access_token=USzfO17JXshu7cKJwP7tbG3USEnbSkvvux"
+      )
+      .then((res) => {
+        const data = res.data.members;
+        const filteredRoster = data.filter(
+          (item) => (item.character.level = 70)
+        );
+        const mappedRoster = filteredRoster.slice(0, 9).map((item) => {
+          const nameSlug = item.character.name.toLowerCase();
+          wowapi
+            .get(
+              `https://us.api.blizzard.com/profile/wow/character/azralon/${nameSlug}/mythic-keystone-profile?namespace=profile-us&locale=en_US&access_token=USzfO17JXshu7cKJwP7tbG3USEnbSkvvux`
+            )
+            .then((response) => {
+              const charProfile = {
+                name: response.data.character.name,
+                rating: response.data.character.current_mythic_rating.rating,
+              };
+              setRoster(...charProfile);
+              console.log(charProfile);
+            });
+          return (
+            <>
+              <div className="flex" key={item.character.name}>
+                <div>{item.character.name}</div>
+                <div>{item.character.level}</div>
+              </div>
+            </>
+          );
+        });
+      })
+      .catch((e) => console.log(e));
+  }, []);
+  return <div>{roster}</div>;
+}

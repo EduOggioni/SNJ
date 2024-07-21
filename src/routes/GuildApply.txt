@@ -1,0 +1,8 @@
+import { InputField } from "../components/InputField";
+
+export function GUildApply(){
+    return(<form>
+        <InputField value="Personagem" placeholder="Personagem" onChange={void}>
+        <InputField value="Personagem" placeholder="Personagem" onChange={void}>
+    </form>)
+}

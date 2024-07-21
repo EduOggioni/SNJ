@@ -1,0 +1,51 @@
+import { useState, useEffect } from "react";
+import { wowapi } from "../wowapi";
+import axios from "axios";
+
+export function MythicPlusRank() {
+  const [roster, setRoster] = useState([]);
+
+  useEffect(() => {
+    wowapi
+      .get(
+        "guild/azralon/so-no-job/roster?namespace=profile-us&locale=en_US&access_token=USzfO17JXshu7cKJwP7tbG3USEnbSkvvux"
+      )
+      .then((res) => {
+        const data = res.data.members;
+        const filteredRoster = data.filter(
+          (item) => item.character.level === 70
+        );
+
+        Promise.all(
+          filteredRoster.slice(0, 9).map((item) => {
+            return axios.get(
+              `character/${item.character.realm.slug}/${item.character.name}?namespace=profile-us&locale=en_US&access_token=USzfO17JXshu7cKJwP7tbG3USEnbSkvvux`
+            );
+          })
+        )
+          .then((responses) => {
+            const mappedRoster = responses.map((res) => {
+              const item = filteredRoster.find(
+                (r) => r.character.name === res.data.name
+              );
+              return (
+                <div className="flex" key={item.character.name}>
+                  <div>{item.character.name}</div>
+                  <div>{item.character.level}</div>
+                  <div>{res.data.achievementPoints}</div>
+                  <div>{res.data.spec ? res.data.spec.name : "-"}</div>
+                  <div>
+                    {res.data.active_title ? res.data.active_title.name : "-"}
+                  </div>
+                </div>
+              );
+            });
+            setRoster(mappedRoster);
+          })
+          .catch((e) => console.log(e));
+      })
+      .catch((e) => console.log(e));
+  }, []);
+
+  return <div>{roster}</div>;
+}
