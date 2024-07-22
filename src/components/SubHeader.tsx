@@ -26,6 +26,11 @@ export function SubHeader(props: SubHeaderProps) {
         Guilda
       </Link>
       <Link
+        className="text-white flex flex-col justify-center focus:text-red-600"
+        to="/rules">
+        Regras
+      </Link>
+      <Link
         className="text-white flex flex-col justify-center focus:text-red-600 "
         to="/staff">
         <GiWizardStaff

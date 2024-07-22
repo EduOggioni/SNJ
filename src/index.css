@@ -5,7 +5,6 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -19,8 +18,14 @@ a {
   color: #646cff;
   text-decoration: inherit;
 }
+
 a:hover {
   color: #535bf2;
+}
+
+html {
+  --tw-bg-opacity: 1;
+  background-color: rgb(18 18 18 / var(--tw-bg-opacity));
 }
 
 body {
@@ -28,7 +33,6 @@ body {
   display: flex;
   place-items: center;
   min-width: 320px;
-  min-height: 100vh;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
 }
@@ -49,9 +53,11 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
 button:hover {
   border-color: #646cff;
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
@@ -62,13 +68,52 @@ button:focus-visible {
     color: #213547;
     background-color: #ffffff;
   }
+
   a:hover {
     color: #747bff;
   }
+
   button {
     background-color: #f9f9f9;
   }
 }
+
 .inverted-icon {
   mix-blend-mode: difference;
+}
+
+.ruleTitle {
+  margin-left: 25px;
+}
+
+.rulePillar {
+  margin-left: 35px;
+}
+
+.listRules {
+  font-size: 1.25rem;
+}
+
+.listRules li {
+  list-style: auto;
+  margin-bottom: 20px;
+}
+
+.listRules li ul {
+  font-size: 1rem;
+}
+
+.listRules li ul li {
+  list-style: disc;
+  margin: 5px 0;
+}
+
+.listRules li ul li .severity {
+  display: contents;
+  color: #cf2929;
+}
+
+.listRules li ul .infractions{
+  list-style: none;
+  margin: 10px 0;
 }

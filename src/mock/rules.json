@@ -1,0 +1,114 @@
+{
+    "base": [
+        {
+            "title": "Respeito e Convivência",
+            "pillars": [
+                "Trate todos os membros com respeito. Não toleramos comportamento tóxico, assédio, discriminação, ou bullying.",
+                "Evite linguagem ofensiva, discursos de ódio ou qualquer tipo de comportamento discriminatório.",
+                "Discussões são permitidas, mas devem ser conduzidas de maneira respeitosa e construtiva."
+            ],
+            "infractions":[
+                {
+                    "type": "Moderada",
+                    "action": "Comportamento rude ou desrespeitoso."
+                },
+                {
+                    "type": "Elevada",
+                    "action": "Assédio, bullying, discriminação, ou linguagem extremamente ofensiva."
+                }
+            ]
+        },
+        {
+            "title": "Inclusão e Diversidade",
+            "pillars": [
+                "Promovemos um ambiente inclusivo. Respeite as diferenças culturais, de gênero, orientação sexual, religião e habilidades.",
+                "Encoraje e apoie novos jogadores e membros da comunidade.",
+                "Não toleramos qualquer forma de exclusão ou marginalização de membros."
+            ],
+            "infractions":[
+                {
+                    "type": "Moderada",
+                    "action": "Comentários pouco inclusivos ou marginalizantes."
+                },
+                {
+                    "type": "Elevada",
+                    "action": "Discriminação ativa ou assédio com base em características pessoais."
+                }
+            ]
+        },
+        {
+            "title": "Conduta no Jogo",
+            "pillars": [
+                "Jogue de forma justa. Não apoiamos trapaças, hacks ou qualquer atividade que viole os termos de serviço do WoW.",
+                "Seja um bom esportista, tanto na vitória quanto na derrota.",
+                "Contribua para uma experiência de jogo positiva para todos."
+            ],
+            "infractions":[
+                {
+                    "type": "Moderada",
+                    "action": "Comportamento antiesportivo."
+                },
+                {
+                    "type": "Elevada",
+                    "action": "Trapaças, uso de hacks, ou violações sérias dos termos de serviço."
+                }
+            ]
+        },
+        {
+            "title": "Uso do Discord",
+            "pillars": [
+                "Use os canais apropriados para cada tipo de conversa ou atividade.",
+                "Não faça spam ou flood nos canais.",
+                "Conteúdo NSFW (não seguro para o trabalho) é proibido fora do canal destinado à isso."
+            ],
+            "infractions":[
+                {
+                    "type": "Leve",
+                    "action": "Uso inadequado dos canais."
+                },
+                {
+                    "type": "Moderada",
+                    "action": "Spam ou flood."
+                },
+                {
+                    "type": "Elevada",
+                    "action": "Publicação de conteúdo NSFW fora dos canais marcados como +18."
+                }
+            ]
+        },
+        {
+            "title": "Procedimentos de Alerta e Punição",
+            "pillars": [
+                "As infrações são classificadas como leves, moderadas e graves. Cada categoria possui consequências específicas.",
+                "A repetição de infrações, mesmo que leves, pode levar a sanções mais severas, até o banimento."
+            ],
+            "infractions":[
+                {
+                    "type": "Leve",
+                    "action": "Advertência e orientação sobre a regra violada. Três infrações leves dentro de um mês equivalem a uma infração moderada."
+                },
+                {
+                    "type": "Moderada",
+                    "action": "Mute temporário no Discord. Duas infrações moderadas dentro de três meses equivalem a uma infração grave."
+                },
+                {
+                    "type": "Elevada",
+                    "action": "Banimento temporário ou imediato, dependendo da gravidade. Infrações graves podem resultar em banimento permanente, conforme julgamento dos administradores/moderadores."
+                }
+            ]
+        },
+        {
+            "title": "Reporte de Conduta Inadequada",
+            "pillars": [
+                "Se presenciar ou sofrer qualquer conduta inadequada, reporte imediatamente aos administradores/moderadores.",
+                "Mantenha provas, como capturas de tela, para ajudar na investigação."
+            ]
+        },
+        {
+            "title": "Mudanças nas Regras",
+            "pillars": [
+                "As regras podem ser atualizadas conforme necessário. Mudanças serão comunicadas a todos os membros."
+            ]
+        }
+    ]
+}
